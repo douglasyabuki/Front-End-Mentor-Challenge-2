@@ -1,0 +1,227 @@
+h1 {
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  font-size: 17px;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 15px;
+  color: hsl(229, 6%, 66%);
+}
+
+p {
+  font-weight: 200;
+  font-size: 10px;
+  color: hsl(229, 6%, 66%);
+}
+
+@mixin boxShadowEffect {
+  -webkit-box-shadow: 0 10px 6px -6px rgb(150, 150, 150);
+  -moz-box-shadow: 0 10px 6px -6px rgb(150, 150, 150);
+       box-shadow: 0 10px 6px -6px rgb(150, 150, 150);
+}
+
+@media (max-width: 1000px) {
+
+  section {
+    width: 270px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 98%);
+  }
+  .desktop{
+    display: none;
+  }
+
+  .description {
+    margin:0 auto;
+    width: 250px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    h1{
+      line-height: 0px;
+      font-size: 17px
+    }
+    h2{
+      line-height: 15px;
+      font-size: 16px;
+    }
+    p{
+      padding-top: 7.5px;
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+
+  .cards {
+    width: 270px;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 98%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      margin: 20px 0 0 20px;
+      line-height: 10px;
+    }
+
+    p {
+      margin: 15px 20px 0 20px;
+    }
+    img{
+      margin: 20px 0 0 175px;
+    }
+
+    .supervisor {
+      background-color: white;
+      height: 150px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-top: 3px solid rgb(0, 189, 189);
+      border-radius: 4px;
+      width: 230px;
+      @include boxShadowEffect()
+
+    }
+
+    .teamBuilder {
+      background-color: white;
+      height: 150px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-top: 3px solid rgb(238, 0, 0);
+      border-radius: 4px;
+      width: 230px;
+      @include boxShadowEffect()
+    }
+
+    .karma {
+      background-color: white;
+      height: 150px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-top: 3px solid rgb(228, 148, 0);
+      border-radius: 4px;
+      width: 230px;
+      @include boxShadowEffect()
+    }
+
+    .calculator {
+      background-color: white;
+      height: 150px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-top: 3px solid rgb(0, 134, 223);
+      border-radius: 4px;
+      width: 230px;
+      @include boxShadowEffect()
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  section {
+    width: 900px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 98%);
+  }
+  .mobile{
+    display: none;
+  }
+
+  .description {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    h1{
+      line-height: 0px;
+      font-size: 17px
+    }
+    h2{
+      line-height: 15px;
+      font-size: 16px;
+    }
+    p{
+      padding-top: 7.5px;
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+
+  .cards {
+    width: 100%;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 98%);
+    grid-template: auto 1fr 1fr 1fr;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1 {
+      margin: 20px 0 0 20px;
+      line-height: 10px;
+    }
+
+    p {
+      margin: 15px 20px 0 20px;
+    }
+    img{
+      margin: 20px 0 0 175px;
+    }
+    .supervisor {
+      background-color: white;
+      height: 150px;
+      padding-bottom: 15px;
+      margin-right: 15px;
+      border-top: 3px solid rgb(0, 189, 189);
+      border-radius: 4px;
+      width: 270px;
+      @include boxShadowEffect()
+
+    }
+
+    .teamBuilder {
+      background-color: white;
+      height: 150px;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-top: 3px solid rgb(238, 0, 0);
+      border-radius: 4px;
+      width: 270px;
+      @include boxShadowEffect()
+    }
+
+    .karma {
+      background-color: white;
+      height: 150px;
+      padding-bottom: 15px;
+      border-top: 3px solid rgb(228, 148, 0);
+      border-radius: 4px;
+      width: 270px;
+      @include boxShadowEffect()
+    }
+
+    .calculator {
+      background-color: white;
+      height: 150px;
+      margin-left:15px;
+      padding-bottom: 15px;
+      border-top: 3px solid rgb(0, 134, 223);
+      border-radius: 4px;
+      width: 270px;
+      @include boxShadowEffect()
+    }
+  }
+
+}
